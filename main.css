@@ -42,7 +42,7 @@ label {
 }
 
 label:hover {
-    -webkit-filter: blur(1px);
+    filter: blur(1px);
     cursor: pointer;
 }
 
@@ -56,4 +56,11 @@ label:hover {
 .js-next-question:hover {
     cursor: pointer;
     background-color: lightseagreen;
+}
+
+.js-score {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3px;
+    margin-right: 20px;
 }
