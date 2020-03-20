@@ -7,7 +7,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
 }
 
 header {
@@ -18,6 +17,9 @@ header {
 h2 {
     font-size: 20px;
     font-weight: 400;
+}
+
+.question {
     font-style: italic;
 }
 
@@ -46,14 +48,14 @@ label:hover {
     cursor: pointer;
 }
 
-.js-next-question {
+button {
     border-radius: 2px;
     border: none;
     font-size: 20px;
-    padding: px;
+    padding: 5px;
 }
 
-.js-next-question:hover {
+button:hover {
     cursor: pointer;
     background-color: lightseagreen;
 }
@@ -63,4 +65,15 @@ label:hover {
     justify-content: flex-end;
     margin-top: 3px;
     margin-right: 20px;
+}
+
+section {
+    background-color: darkgray;
+    padding: 20px;
+    font-style: normal;
+}
+
+aside {
+    padding: 20px;
+    font-size: 18px;
 }
