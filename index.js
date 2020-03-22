@@ -34,15 +34,14 @@ function generateAnswerValidation() {
         generateNextQuestionButton();
         updateScore();
     });
-    {once: true};
 }
 
 function generateNextQuestionButton() {
-    $('.js-button').html('<button type="submit" id="js-next-question" for="js-questions">Next Question</button>')
+ $('.js-button').html('<button type="button" for="js-questions" id="js-next-question">Next Question</button>')
 }
 
 function nextQuestion() {
-    $('#js-next-question').on('click', function(event) {
+    $('main').on('submit', '.question-form', function(event) {
         event.preventDefault();
         console.log(this);
     });
@@ -54,6 +53,7 @@ function handleQuiz() {
     updateScore();
     updateQuestionNumber();
     generateAnswerValidation();
+    nextQuestion();
 }
 
 handleQuiz();
