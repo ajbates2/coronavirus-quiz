@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0;
 }
 
 header {
@@ -30,6 +32,7 @@ h2 {
     border: none;
     border-radius: 4px;
     padding: 20px;
+    margin: 0 20px;
 }
 
 input[type="radio"] {
@@ -60,7 +63,7 @@ button:hover {
     background-color: lightseagreen;
 }
 
-.js-score {
+.score {
     display: flex;
     justify-content: flex-end;
     margin-top: 3px;
@@ -71,9 +74,28 @@ section {
     background-color: darkgray;
     padding: 20px;
     font-style: normal;
+    margin-bottom: 20px;
 }
 
 aside {
     padding: 20px;
     font-size: 18px;
+    margin: 10px 20%;
+}
+
+.correct {
+    background-color: white;
+}
+
+.incorrect {
+    filter: blur(1px);
+}
+
+.final-score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.final-aside {
+    font-style: italic;
 }

@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Coronavirus Quiz</title>
 </head>
 <body>
     <header>
-        <h1>Question 1</h1>
+        <h1>Question <span class="js-questionNumber">0</span> of 10</h1>
     </header>
     <main>
         <form class="question-form" id="js-questions">
-            <h2 class="question">Which of these is NOT a form of Coronavirus?</h2>
-            <fieldset class="container">
+            <h2 class="question js-question"></h2>
+            <fieldset class="container js-container">
                 <input type="radio" name="options" id="ans1">
-                    <label for="ans1">SARS</label>
+                    <label for="ans1" class="js-ans1"></label>
                     <br>
                 <input type="radio" name="options" id="ans2">
-                    <label for="ans2">MERS</label>
+                    <label for="ans2" class="js-ans2"></label>
                     <br>
                 <input type="radio" name="options" id="ans3">
-                    <label for="ans3">T-VIRUS</label>
+                    <label for="ans3" class="js-ans3"></label>
                     <br>
                 <input type="radio" name="options" id="ans4">
-                    <label for="ans4">COVID-19</label>
+                    <label for="ans4" class="js-ans4"></label>
             </fieldset>
+            <p class="score js-score"></p>
+            <p class="js-validation"></p>
+            <span class="js-button"></span>
         </form>
-        <footer>
-            <p class="js-score">score: 0</p>
-            <p>That is correct!</p>
-            <button class="js-next-question">Next Question</button>
-        </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="store.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

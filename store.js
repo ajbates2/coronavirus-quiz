@@ -1,7 +1,8 @@
-const STORE = [
+let STORE = {
+    questions: [
     {//1
     question: 'Which of these is NOT a strain of Coronavirus?',
-    options: ['SARS', 'MERS', 'T-VIRUS', 'COVID=19'],
+    options: ['SARS', 'MERS', 'T-VIRUS', 'COVID-19'],
     answer: 'T-VIRUS'
     },
     {//2
@@ -53,5 +54,8 @@ const STORE = [
     question: 'Is there a cure for COVID-19 at this time',
     options: ['No', 'Yes'],
     answer: 'No'
-    },
-]
+    }
+],
+questionNumber: 0,
+score: 0
+};
