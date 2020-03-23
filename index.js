@@ -1,12 +1,19 @@
-let question = STORE.questions[STORE.questionNumber];
+let questionNumber = 0;
+let score = 0;
+let question = STORE.questions[questionNumber];
 
 function updateQuestionNumber() {
-    console.log('updateQuestionNumber is working')
-    $('.js-questionNumber').text(STORE.questionNumber + 1);
+    $('.js-questionNumber').text(questionNumber + 1);
 }
 
 function updateQuestion() {
     $('.js-question').text(`${question.question}`);
+}
+
+function updateIndex(item) {
+    for(let i = 0; i < item; i++) {
+        item = i++;
+    }
 }
 
 function updateOptions() {
@@ -17,16 +24,17 @@ function updateOptions() {
 }
 
 function updateScore() {
-    $('.js-score').text('score: ' + STORE.score);
+    $('.js-score').text('score: ' + score);
 }
 
 function generateAnswerValidation() {
-    $('.js-container').on('click', 'label', function(event) {
+    $('.js-container').one('click', 'label', function(event) {
         let targetOption = $(this).text();
         $('label').val(targetOption);
         console.log(targetOption);
         if (question.answer === targetOption) {
-           $('.js-validation').text('That is Correct!')
+           $('.js-validation').text('That is Correct!');
+           updateIndex(score);
         }
         else if (question.answer !== event.currentTarget) {
             $('.js-validation').text(`That is incorrect. The right answer is ${question.answer}`)
@@ -37,15 +45,17 @@ function generateAnswerValidation() {
 }
 
 function generateNextQuestionButton() {
- $('.js-button').html('<button type="button" for="js-questions" id="js-next-question">Next Question</button>')
+ $('.js-button').html('<button type="submit" for="js-questions" id="js-next-question">Next Question</button>')
 }
 
 function nextQuestion() {
     $('main').on('submit', '.question-form', function(event) {
         event.preventDefault();
         console.log(this);
+        updateIndex(questionNumber);
+        console.log(questionNumber);
     });
-}
+};
 
 function handleQuiz() {
     updateOptions();

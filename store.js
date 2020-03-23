@@ -56,6 +56,4 @@ let STORE = {
     answer: 'No'
     }
 ],
-questionNumber: 0,
-score: 0
 };
