@@ -33,6 +33,7 @@ h2 {
 
 .container {
     display: flex;
+    flex-direction: column;
     background-color: #804844;
     border: none;
     border-radius: 4px;
@@ -42,6 +43,7 @@ h2 {
 
 input[type="radio"] {
     opacity: 0;
+    height: 0;
 }
 
 label {
@@ -49,7 +51,7 @@ label {
     background-color: #CC736C;
     border-radius: 4px;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
 }
 
 label:hover {
